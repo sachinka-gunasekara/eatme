@@ -1,7 +1,10 @@
 import { Box, Grid } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import firstimg from '../images/firstimg.svg'
 import Button from '@mui/material/Button';
+import SecondSec from '../components/SecondSec';
+import BottomSec from '../components/BottomSec';
 
 const styles = {
   wrapper: {
@@ -53,13 +56,15 @@ export default function Home() {
               <span style={styles.heroDesc}>get ready to embark on a delectable journey where taste buds are tantalized, 
                 culinary boundaries are pushed, and food becomes an extraordinary experience.</span>
             </div>
-            <Button variant="contained" style={styles.button}>Place Your Order</Button>
+            <Button variant="contained" style={styles.button} to ="../components/Menu">Place Your Order</Button>
           </Grid>
           <Grid item xs={7}>
               <img src={firstimg} alt="Image" style={styles.image} />
           </Grid>
         </Grid>
       </Box>
+      <SecondSec/>
+      <BottomSec/>
     </Box>
   );
 }

@@ -1,18 +1,16 @@
-import BottomSec from './components/BottomSec';
-import SecondSec from './components/SecondSec';
+import Footer from './components/Footer';
 import Topbar from './components/Topbar';
 import Home from './pages/Home';
-// import Button from '@mui/material/Button';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-        
-        <Topbar/>
-        <Home/>
-        <SecondSec/>
-        <BottomSec/>
-        {/* <Button variant="contained">Hello World</Button> */}
+        <Router>
+          <Topbar/>
+          <Home/>
+          <Footer/>
+        </Router>
         
     </div>
   );

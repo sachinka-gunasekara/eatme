@@ -1,9 +1,20 @@
 import React from 'react';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import Button from '@mui/material/Button';
+import { Box } from '@mui/material';
+
+const styles = {
+    button: {
+        borderColor: '#FFA500',
+        color: 'black',
+        boxShadow: 'none',
+        fontSize: '12px'
+    }
+};
 
 const CustomCardFood = ({ image, title, description }) => {
   return (
-    <Card sx={{ boxShadow: 'none', paddingTop: '30px' , borderRadius: '20px'}}>
+    <Card sx={{ boxShadow: 'none', padding: '30px 30px 0px 30px' , borderRadius: '20px', minWidth: '270px'}}>
       <CardMedia
         component="img"
         image={image}
@@ -20,12 +31,15 @@ const CustomCardFood = ({ image, title, description }) => {
         }}
       />
       <CardContent>
-        <Typography gutterBottom component="div" sx={{ textAlign: 'center', fontSize: '20px' }}>
+        <Typography gutterBottom component="div" sx={{ textAlign: 'center', fontSize: '16px' }}>
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop:'20px' }}>
+        <Typography variant="body2" color="black" sx={{ textAlign: 'center', fontSize: '12px', fontWeight: 'bold' }}>
           {description}
         </Typography>
+        <Button variant="outlined" style={styles.button}>Add to Cart</Button>
+        </Box>
       </CardContent>
     </Card>
   );
