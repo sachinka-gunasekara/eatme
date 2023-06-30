@@ -35,7 +35,8 @@ const styles = {
   },
   heroDesc: {
     fontSize: '20px',
-    marginTop: '160px'
+    marginTop: '160px',
+    lineHeight: '1.5'
   },
   button: {
     backgroundColor: '#FFA500',
