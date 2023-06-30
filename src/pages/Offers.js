@@ -11,7 +11,7 @@ export default function Offers() {
         <CssBaseline />
         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Typography variant="h6" component="h1">
-            No Offers Right Now!
+            Stay Tuned!
           </Typography>
         </Grid>
       </Grid>

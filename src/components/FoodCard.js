@@ -1,20 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import { Box } from '@mui/material';
 
 const styles = {
-    button: {
-        borderColor: '#FFA500',
-        color: 'black',
-        boxShadow: 'none',
-        fontSize: '12px'
-    }
+  button: {
+    borderColor: '#FFA500',
+    color: 'black',
+    boxShadow: 'none',
+    fontSize: '12px'
+  },
+  selectedButton: {
+    borderColor: '#FFA500',
+    color: 'white',
+    backgroundColor: '#FFA500',
+    fontSize: '12px'
+  }
 };
 
-const CustomCardFood = ({ image, title, description }) => {
+const CustomCardFood = ({ image, title, description, inCart, onAddToCart }) => {
   return (
-    <Card sx={{ boxShadow: 'none', padding: '30px 30px 0px 30px' , borderRadius: '20px', minWidth: '270px', marginBottom: '20px'}}>
+    <Card
+      sx={{
+        boxShadow: 'none',
+        padding: '30px 30px 0px 30px',
+        borderRadius: '20px',
+        minWidth: '270px',
+        marginBottom: '20px'
+      }}
+    >
       <CardMedia
         component="img"
         image={image}
@@ -22,7 +36,7 @@ const CustomCardFood = ({ image, title, description }) => {
           width: 200,
           height: 200,
           borderRadius: '50%',
-          backgroundColor: '#FFEFE1',
+          backgroundColor: '#F4C95D',
           margin: '0 auto',
           display: 'flex',
           justifyContent: 'space-around',
@@ -34,11 +48,19 @@ const CustomCardFood = ({ image, title, description }) => {
         <Typography gutterBottom component="div" sx={{ textAlign: 'center', fontSize: '16px' }}>
           {title}
         </Typography>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop:'20px' }}>
-        <Typography variant="body2" color="black" sx={{ textAlign: 'center', fontSize: '12px', fontWeight: 'bold' }}>
-          {description}
-        </Typography>
-        <Button variant="outlined" style={styles.button}>Add to Cart</Button>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '20px' }}>
+          <Typography variant="body2" color="black" sx={{ textAlign: 'center', fontSize: '12px', fontWeight: 'bold' }}>
+            {description}
+          </Typography>
+          {!inCart ? (
+            <Button variant="outlined" style={styles.button} onClick={onAddToCart}>
+              Add to Cart
+            </Button>
+          ) : (
+            <Button variant="outlined" style={styles.selectedButton} disabled>
+              Added to Cart
+            </Button>
+          )}
         </Box>
       </CardContent>
     </Card>
@@ -46,5 +68,11 @@ const CustomCardFood = ({ image, title, description }) => {
 };
 
 export default function FoodCard({ image, title, description }) {
-  return <CustomCardFood image={image} title={title} description={description} />;
+  const [inCart, setInCart] = useState(false);
+
+  const handleAddToCart = () => {
+    setInCart(true);
+  };
+
+  return <CustomCardFood image={image} title={title} description={description} inCart={inCart} onAddToCart={handleAddToCart} />;
 }

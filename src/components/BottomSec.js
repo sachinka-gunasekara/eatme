@@ -60,7 +60,7 @@ const styles = {
 export default function BottomSec() {
   return (
     <Box>
-        <Box style={{backgroundColor: '#FFEFE1', paddingBottom: '30px'}}>
+        <Box style={{backgroundColor: '#F4C95D', paddingBottom: '30px'}}>
             <span style={styles.heading}>Our Special Dishes</span>
             <Grid container style={styles.sectionS} justifyContent={'space-around'}>
                 <FoodCard

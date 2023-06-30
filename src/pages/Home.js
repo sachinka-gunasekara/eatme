@@ -17,7 +17,7 @@ const styles = {
     paddingBottom: '30px'
   },
   landing: {
-    backgroundColor: "#FFEFE1",
+    backgroundColor: "#F4C95D",
     maxWidth: 'none',
     borderRadius: '40px',
     padding: '50px'
@@ -55,7 +55,7 @@ export default function Home() {
               <span style={styles.heroTopic}>Unleash Your Inner Foodie</span><br/>
             </div>
             <div style={{ marginBottom: '50px'}}>
-              <span style={styles.heroDesc}>get ready to embark on a delectable journey where taste buds are tantalized, 
+              <span style={styles.heroDesc}>Get ready to embark on a delectable journey where taste buds are tantalized, 
                 culinary boundaries are pushed, and food becomes an extraordinary experience.</span>
             </div>
             <Button variant="contained" style={styles.button} component={Link} to="/menu">Place Your Order</Button>

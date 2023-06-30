@@ -13,6 +13,8 @@ import backImage from '../images/Rectangle.svg';
 import FoodCard from '../components/FoodCard';
 import Topbar from '../components/Topbar';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/system';
+import Footer from '../components/Footer';
 
 const styles = {
     sectionS: {
@@ -62,7 +64,7 @@ const styles = {
         margin: '0px 350px 0px 450px'
     },
     menuContainer: {
-        backgroundColor: "#FFEFE1",
+        backgroundColor: "#F4C95D",
         maxWidth: 'none',
         borderRadius: '40px',
         padding: '50px',
@@ -78,6 +80,10 @@ const styles = {
         marginBottom: '10px'
       }
 };
+
+const StyledTabIndicator = styled('span')(({ theme }) => ({
+    backgroundColor: 'red',
+  }));
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -128,7 +134,13 @@ export default function Menu() {
 
            <Box sx={{ width: '100%' }}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <Tabs value={value} onChange={handleChange} aria-label="food items">
+                    <Tabs value={value} onChange={handleChange} aria-label="food items"  
+                    textColor="black"
+                    indicatorColor="black"
+                    TabIndicatorProps={{
+                        component: StyledTabIndicator,
+                        sx: { height: '3px', backgroundColor: '#FFA500' },
+                    }}>
                     <Tab label="All" {...a11yProps(0)} />
                     <Tab label="Breakfast" {...a11yProps(1)} />
                     <Tab label="Lunch" {...a11yProps(2)} />
@@ -274,6 +286,7 @@ export default function Menu() {
             </Box>
             </Grid>
         </Box>
+        <Footer/>
     </Box>
   );
 }

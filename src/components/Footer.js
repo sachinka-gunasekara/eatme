@@ -1,9 +1,10 @@
 import React from 'react';
-import { Box, Grid } from '@mui/material';
+import { Box, Button, Grid } from '@mui/material';
 import { LocationOnRounded, LocalPhoneRounded } from '@mui/icons-material';
 import tray from '../images/trayblack.png'
 import facebook from '../images/facebook.svg'
 import insta from '../images/instagram.svg'
+import { Link } from 'react-router-dom';
 
 const styles = {
   sectionS: {
@@ -37,13 +38,13 @@ const styles = {
     paddingLeft: '10px',
     width: '40px', 
     height: '40px', 
-  },
+  }
 };
 
 export default function Footer() {
   return (
     <Box>
-      <Box style={{ backgroundColor: '#FFEFE1', padding: '80px 80px 30px 80px' }}>
+      <Box style={{ backgroundColor: '#F4C95D', padding: '80px 80px 30px 80px' }}>
         <Grid container justifyContent={'center'}>
           <Grid item xs={3} style={styles.gridItem}>
             <div style={{ display: 'flex', alignItems: 'center', paddingBottom: '30px'}}>
@@ -58,15 +59,15 @@ export default function Footer() {
           </Grid>
           <Grid item xs={3} style={styles.gridItem}>
             <span style={{fontWeight: 'bold', paddingBottom: '30px'}}>Links</span>
-            <span>Home</span>
-            <span>Menu</span>
-            <span>Offers</span>
+            <Button variant="text" size="small" component={Link} to="/">Home</Button>
+            <Button variant="text" size="small" component={Link} to="/menu">Menu</Button>
+            <Button variant="text" size="small" component={Link} to="/offers">Offers</Button>
           </Grid>
           <Grid item xs={3} style={styles.gridItem}>
             <span style={{fontWeight: 'bold', paddingBottom: '30px'}}>Contact Us</span>
             <Box style={styles.iconContainer}>
-              <LocationOnRounded /><span>0704566789</span><br/>
-              <LocalPhoneRounded /><span>Galle road, Matara</span>
+              <LocalPhoneRounded /><span>0704566789</span><br/>
+              <LocationOnRounded/><span>Galle road, Matara</span>
             </Box>
           </Grid>
           <Grid item xs={3} style={styles.gridItem}>

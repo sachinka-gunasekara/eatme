@@ -18,8 +18,17 @@ export default function SignInSide() {
   const navigate = useNavigate(); 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate('/');
+    const formData = new FormData(event.currentTarget);
+    const email = formData.get('email');
+    const password = formData.get('password');
+
+    if (email && password) {
+      navigate('/');
+    } else {
+      alert('Please fill in all the required fields.');
+    }
   };
+
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -37,7 +46,7 @@ export default function SignInSide() {
             backgroundPosition: 'center',
           }}
         />
-        <Grid item xs={7} sm={8} md={5} square style={{backgroundColor: '#FFEFE1'}}>
+        <Grid item xs={7} sm={8} md={5} square style={{backgroundColor: '#F4C95D'}}>
           <Box
             sx={{
               my: 8,
@@ -83,6 +92,7 @@ export default function SignInSide() {
                   mt: 3,
                   mb: 2,
                   backgroundColor: '#FFA500',
+                  color: 'black',
                   boxShadow: 'none',
                   '&:hover': {
                     backgroundColor: '#FFA500', 

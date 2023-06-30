@@ -29,7 +29,7 @@ const CustomCard = ({ image, title, description }) => {
           width: 100,
           height: 100,
           borderRadius: '50%',
-          backgroundColor: '#FFEFE1',
+          backgroundColor: '#F4C95D',
           margin: '0 auto',
           display: 'flex',
           justifyContent: 'space-around',

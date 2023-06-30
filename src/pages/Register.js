@@ -18,9 +18,19 @@ export default function SignUp() {
     const navigate = useNavigate(); 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // const data = new FormData(event.currentTarget);
-        navigate('/');
-  };
+        const formData = new FormData(event.currentTarget);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const password = formData.get('password');
+        const phoneNumber = formData.get('phoneNumber');
+        const address = formData.get('address');
+    
+        if (name && email && password && phoneNumber && address) {
+          navigate('/');
+        } else {
+          alert('Please fill in all the required fields.');
+        }
+      };
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -38,7 +48,7 @@ export default function SignUp() {
             backgroundPosition: 'center',
           }}
         />
-        <Grid item xs={7} sm={8} md={5} square style={{backgroundColor: '#FFEFE1'}}>
+        <Grid item xs={7} sm={8} md={5} square style={{backgroundColor: '#F4C95D'}}>
         <Box
           sx={{
             my: 8,
@@ -121,6 +131,7 @@ export default function SignUp() {
                 mb: 2,
                 backgroundColor: '#FFA500',
                 boxShadow: 'none',
+                color: 'black',
                 '&:hover': {
                   backgroundColor: '#FFA500', 
                 },
