@@ -6,6 +6,7 @@ import eatnoodles from '../images/noodles.svg';
 import eatsoup from '../images/soup.svg';
 import Button from '@mui/material/Button';
 import backImage from '../images/Rectangle.svg';
+import { Link } from 'react-router-dom';
 
 const styles = {
     sectionS: {
@@ -79,13 +80,13 @@ export default function BottomSec() {
                 />
             </Grid>
             <Box style={styles.buttonPosition}>
-                <Button variant="contained" style={styles.button}>Explore Our Menu</Button>
+                <Button variant="contained" style={styles.button} component={Link} to="/menu">Explore Our Menu</Button>
             </Box>
         </Box>
         <div style={styles.backImage}>
             <span style={styles.lastDesc}>We pride ourselves on making fresh foods from best ingredients</span>
             <Box style={styles.buttonPosition1}>
-                <Button variant="contained" style={styles.button}>Place Your Order</Button>
+                <Button variant="contained" style={styles.button} component={Link} to="/menu">Place Your Order</Button>
             </Box>
         </div>
     </Box>

@@ -18,13 +18,6 @@ const styles = {
     alignItems: 'center',
     textAlign: 'center',
   },
-  gridItem1: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    textAlign: 'center',
-    paddingTop: '30px'
-  },
   iconContainer: {
     marginTop: '10px',
     display: 'flex',
@@ -76,10 +69,9 @@ export default function Footer() {
               <LocalPhoneRounded /><span>Galle road, Matara</span>
             </Box>
           </Grid>
-        </Grid>
-        <Grid style={styles.gridItem1}>
-          <span>Follow Us On</span>
-          <div style={{ display: 'flex', alignItems: 'center', paddingTop: '20px', justifyContent: 'space-evenly'}}>
+          <Grid item xs={3} style={styles.gridItem}>
+          <span style={{fontWeight: 'bold', paddingBottom: '30px'}}>Follow Us On</span>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-evenly'}}>
               <img
                 src={facebook}
                 alt="fb"
@@ -91,6 +83,7 @@ export default function Footer() {
                 style={styles.logo2}
               />
             </div>
+        </Grid>
         </Grid>
       </Box>
     </Box>

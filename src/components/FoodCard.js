@@ -14,7 +14,7 @@ const styles = {
 
 const CustomCardFood = ({ image, title, description }) => {
   return (
-    <Card sx={{ boxShadow: 'none', padding: '30px 30px 0px 30px' , borderRadius: '20px', minWidth: '270px'}}>
+    <Card sx={{ boxShadow: 'none', padding: '30px 30px 0px 30px' , borderRadius: '20px', minWidth: '270px', marginBottom: '20px'}}>
       <CardMedia
         component="img"
         image={image}
