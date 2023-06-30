@@ -34,7 +34,7 @@ export default function SignUp() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Grid container component="main" sx={{ height: '80vh', justifyContent: 'center', marginTop: '40px' , marginBottom: '40px'}}>
+      <Grid container component="main" sx={{ height: '80vh', justifyContent: 'center', marginTop: '25px' , marginBottom: '40px'}}>
         <CssBaseline />
         <Grid
           item
@@ -46,9 +46,10 @@ export default function SignUp() {
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            borderRadius: '40px 0px 0px 40px'
           }}
         />
-        <Grid item xs={7} sm={8} md={5} square style={{backgroundColor: '#F4C95D'}}>
+        <Grid item xs={7} sm={8} md={5} square style={{backgroundColor: '#F4C95D', borderRadius: '0px 40px 40px 0px'}}>
         <Box
           sx={{
             my: 8,
