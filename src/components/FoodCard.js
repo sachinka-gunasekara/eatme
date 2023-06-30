@@ -5,15 +5,15 @@ import { Box } from '@mui/material';
 
 const styles = {
   button: {
-    borderColor: '#FFA500',
+    borderColor: '#DD7230',
     color: 'black',
     boxShadow: 'none',
     fontSize: '12px'
   },
   selectedButton: {
-    borderColor: '#FFA500',
+    borderColor: '#DD7230',
     color: 'white',
-    backgroundColor: '#FFA500',
+    backgroundColor: '#DD7230',
     fontSize: '12px'
   }
 };

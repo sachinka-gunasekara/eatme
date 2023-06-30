@@ -24,7 +24,7 @@ const styles = {
         margin: '0 auto',
     },
     button: {
-        backgroundColor: '#FFA500',
+        backgroundColor: '#DD7230',
         color: 'black',
         boxShadow: 'none',
     },

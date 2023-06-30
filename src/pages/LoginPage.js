@@ -92,11 +92,11 @@ export default function SignInSide() {
                 sx={{
                   mt: 3,
                   mb: 2,
-                  backgroundColor: '#FFA500',
+                  backgroundColor: '#DD7230',
                   color: 'black',
                   boxShadow: 'none',
                   '&:hover': {
-                    backgroundColor: '#FFA500', 
+                    backgroundColor: '#DD7230', 
                   },
                 }}
               >

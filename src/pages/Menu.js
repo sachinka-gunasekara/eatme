@@ -32,7 +32,7 @@ const styles = {
         margin: '0 auto',
     },
     button: {
-        backgroundColor: '#FFA500',
+        backgroundColor: '#DD7230',
         color: 'black',
         boxShadow: 'none',
     },
@@ -139,7 +139,7 @@ export default function Menu() {
                     indicatorColor="black"
                     TabIndicatorProps={{
                         component: StyledTabIndicator,
-                        sx: { height: '3px', backgroundColor: '#FFA500' },
+                        sx: { height: '3px', backgroundColor: '#DD7230' },
                     }}>
                     <Tab label="All" {...a11yProps(0)} />
                     <Tab label="Breakfast" {...a11yProps(1)} />

@@ -130,11 +130,11 @@ export default function SignUp() {
               sx={{
                 mt: 3,
                 mb: 2,
-                backgroundColor: '#FFA500',
+                backgroundColor: '#DD7230',
                 boxShadow: 'none',
                 color: 'black',
                 '&:hover': {
-                  backgroundColor: '#FFA500', 
+                  backgroundColor: '#DD7230', 
                 },
               }}
             >

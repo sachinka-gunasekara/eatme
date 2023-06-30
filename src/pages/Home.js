@@ -39,7 +39,7 @@ const styles = {
     lineHeight: '1.5'
   },
   button: {
-    backgroundColor: '#FFA500',
+    backgroundColor: '#DD7230',
     color: 'black',
     boxShadow: 'none'
   }
